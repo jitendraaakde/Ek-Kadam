@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../../public/IMG-20240929-WA0001.jpg';
+import img1 from '../../public/grid1.jpg';
 import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin, FaYoutube, FaWhatsapp } from 'react-icons/fa';
 import { FiBook, FiUsers, FiHeart, FiDroplet } from 'react-icons/fi';
 

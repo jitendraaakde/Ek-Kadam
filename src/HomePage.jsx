@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  FaFacebook, FaTwitter, FaInstagram, FaLinkedin, 
-  FaBars, FaTimes, FaArrowLeft, FaArrowRight, 
+import {
+  FaFacebook, FaTwitter, FaInstagram, FaLinkedin,
+  FaBars, FaTimes, FaArrowLeft, FaArrowRight,
   FaEnvelope,
   FaUsers,
   FaHospital,
@@ -22,7 +22,7 @@ import slider4 from '../public/journey4.jpg';
 const images = [slider1, slider2, slider3, slider4];
 
 const captions = [
-    'एक छोटा कदम, किसी के जीवन में बड़ा बदलाव ला सकता है!',
+  'एक छोटा कदम, किसी के जीवन में बड़ा बदलाव ला सकता है!',
   'हर कदम पर ज्ञान का दीप जलाएं',
   'शिक्षा की शक्ति, हर बच्चे का सपना पूरा करें',
   'सपनों को हकीकत में बदलने के लिए शिक्षा आवश्यक है',
@@ -60,9 +60,8 @@ export default function HomePage() {
           {images.map((image, index) => (
             <div
               key={index}
-              className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
-                index === currentImage ? 'opacity-100' : 'opacity-0'
-              }`}
+              className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${index === currentImage ? 'opacity-100' : 'opacity-0'
+                }`}
               style={{ backgroundImage: `url(${image})` }}
             >
               <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
@@ -99,9 +98,8 @@ export default function HomePage() {
           {images.map((_, index) => (
             <button
               key={index}
-              className={`w-3 h-3 rounded-full ${
-                index === currentImage ? 'bg-white' : 'bg-gray-400'
-              }`}
+              className={`w-3 h-3 rounded-full ${index === currentImage ? 'bg-white' : 'bg-gray-400'
+                }`}
               onClick={() => setCurrentImage(index)}
             />
           ))}
@@ -110,13 +108,13 @@ export default function HomePage() {
 
       {/* Main Content */}
       <main className="flex-grow">
-        <OurImpactSection/>
+        <OurImpactSection />
         <EducationInitiativesSection />
         <HealthcareProgramsSection />
         <ContactFormSection />
       </main>
 
-      
+
 
       {/* Floating Donate Button */}
       <Link
@@ -134,11 +132,10 @@ function NavLink({ to, children, mobile = false }) {
   return (
     <Link
       to={to}
-      className={`${
-        mobile
-          ? 'block py-2 px-4 hover:bg-gray-100'
-          : 'text-gray-600 hover:text-primary'
-      } transition duration-300`}
+      className={`${mobile
+        ? 'block py-2 px-4 hover:bg-gray-100'
+        : 'text-gray-600 hover:text-primary'
+        } transition duration-300`}
     >
       {children}
     </Link>
@@ -152,9 +149,9 @@ function NavLink({ to, children, mobile = false }) {
 import impact1 from '../public/impact1.jpg'
 import impact2 from '../public/impact3.jpg'
 import impact3 from '../public/impact4.jpg'
-import impact4 from '../public/impact5.jpg'
-import impact5 from '../public/impact6.jpg'
-import impact6 from '../public/impactMahila2.jpg'
+import impactMahila from '../public/impactMahila2.jpg'
+import impactBlood from '../public/Blood3.jpg'
+import impact6 from '../public/Mahila1.jpg'
 
 const impactStories = [
   {
@@ -188,7 +185,7 @@ const impactStories = [
       'एक कदम' ने कई गांवों में जाकर लड़कियों को सेनेटरी पैड वितरित किए और 
       माहवारी से जुड़ी जागरूकता कार्यक्रम आयोजित किए, जिससे महिलाओं को महत्वपूर्ण स्वास्थ्य जानकारी दी गई।
     `,
-    image: impact4,
+    image: impactMahila,
   },
   {
     title: "जरूरतमंदों को रक्तदान",
@@ -196,7 +193,7 @@ const impactStories = [
       संस्था के सदस्यों ने 50 से अधिक मरीजों को रक्तदान किया और रक्तदान शिविरों का आयोजन किया। 
       इसके साथ ही, रक्तदान के महत्व के बारे में जागरूकता कार्यक्रम भी चलाए गए।
     `,
-    image: impact5,
+    image: impactBlood,
   },
   {
     title: "स्वास्थ्य जागरूकता कार्यक्रम",
@@ -216,8 +213,8 @@ function OurImpactSection() {
           <FaHandHoldingHeart className="text-blue-500 mx-auto" size={48} />
           <h2 className="text-3xl font-bold mt-4">अब तक की यात्रा</h2>
           <p className="text-gray-600 mt-2">
-            "हमने मिलकर बच्चों की शिक्षा में बड़ा बदलाव लाने का प्रयास किया है। 
-            यह यात्रा सिर्फ संख्या नहीं है, बल्कि उन चेहरों की कहानी है जिन्हें हमने 
+            "हमने मिलकर बच्चों की शिक्षा में बड़ा बदलाव लाने का प्रयास किया है।
+            यह यात्रा सिर्फ संख्या नहीं है, बल्कि उन चेहरों की कहानी है जिन्हें हमने
             आशा और सपनों का एक नया रास्ता दिखाया।"
           </p>
         </div>
@@ -312,7 +309,7 @@ import grid2 from '../public/grid2.jpg';
 import grid3 from '../public/grid3.jpg';
 import grid4 from '../public/grid4.jpg';
 import grid5 from '../public/grid5.jpg';
-import grid6 from '../public/grid6.jpg';
+import grid6 from '../public/impact1.jpg';
 import grid7 from '../public/grid7.jpg';
 import grid8 from '../public/impact6.jpg';
 import grid9 from '../public/journey1.png';
@@ -324,7 +321,7 @@ import grid12 from '../public/journey4.jpg';
 
 function HealthcareProgramsSection() {
   const images = [
- grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9, grid10, grid11, grid12
+    grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9, grid10, grid11, grid12
   ];
 
   return (
